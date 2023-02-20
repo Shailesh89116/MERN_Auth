@@ -9,7 +9,9 @@ const app=express();
 connectDB();
 
 app.use(express.json());
-app.use(cors()) 
+app.use(cors({
+    origin:["https://bright-stardust-1c7ec0.netlify.app"]
+})) 
  // allow us to get data from the body
 
 app.use('/api/auth',require('./route/auth'));
