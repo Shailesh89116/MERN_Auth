@@ -67,7 +67,7 @@ exports.forgetPassword=async(req,res,next)=>{
         const resetToken=await user.getResetPasswordToken();
         console.log(resetToken);
         await user.save();
-        const resetURL=`http://localhost:3000/passwordReset/${resetToken}`;
+        const resetURL=`https://mern-auth-frontend-5tkuudb3o-shailesh89116.vercel.app/passwordReset/${resetToken}`;
 
         const message=`
         <h1>You have request a password reset</h1>
